@@ -11,7 +11,9 @@ fs.readdir(folderPath, (err, files) => {
       if (stats.isFile()) {
         const fileInfo = path.parse(filePath);
         console.log(
-          `${fileInfo.name} - ${fileInfo.ext.slice(1)} - ${(stats.size/1024).toFixed(3)} Kb`,
+          `${fileInfo.name} - ${fileInfo.ext.slice(1)} - ${(
+            stats.size / 1024
+          ).toFixed(3)} Kb`,
         );
       }
     });
